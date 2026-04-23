@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhtasari wa kozi</title>
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --card-bg: #2d2d2d;
+            --primary-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: var(--transition);
+            padding-bottom: 50px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .controls {
+            position: sticky;
+            top: 0;
+            background: var(--card-bg);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: var(--accent-color);
+            color: white;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        button:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(0,0,0,0.02);
+            border-radius: 5px;
+        }
+
+        li strong {
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        body.dark-mode li {
+            background: rgba(255,255,255,0.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            main { padding: 0 10px; }
+            article { padding: 15px; }
+            h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Muhtasari wa kozi</h1>
+        <p>Jenga Familia Imara kupitia Hekima na Uongozi: Pastor Aloyce</p>
+        <p>Pastor Aloyce</p>
+    </header>
+
+    <div class="controls">
+        <button onclick="toggleDarkMode()">Badili Hali (Dark Mode)</button>
+        <button onclick="changeFontSize(1)">Ongeza Maandishi +</button>
+        <button onclick="changeFontSize(-1)">Punguza Maandishi -</button>
+    </div>
+
+    <main>
+        <article id="content-area">
+            <section>
+                <h2>Moduli ya Kwanza: Kuongeza Heshima ya Mke kwa Mumewe</h2>
+                <p>Heshima haidaiwi, bali hutengenezwa kupitia matendo ya mwanaume. Ili mke na familia wakuheshimu, mwanaume unapaswa:</p>
+                <ul>
+                    <li><strong>Kuwa mtoaji na mlinzi:</strong> Siyo tu kifedha, bali pia ulinzi wa kihisia na kiroho. Mwanamke anajisikia salama chini ya mwanaume anayewajibika.</li>
+                    <li><strong>Uongozi kwa mfano:</strong> Huwezi kudai nidhamu ikiwa wewe huna nidhamu. Heshima inakuja unapoishi kile unachokisema.</li>
+                    <li><strong>Upendo wa vitendo:</strong> Kumjali mkeo mbele ya watoto na watu baki huongeza thamani yake, na kwa kurudi, yeye hukupa heshima kama kiongozi wake.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Moduli ya Pili: Mwanaume Atajuaje Kama Mkewe Anamtii?</h2>
+                <p>Utii si uoga, bali ni ishara ya imani. Mwanaume anajua mkewe anamtii kupitia:</p>
+                <ul>
+                    <li><strong>Kushauriana:</strong> Mke anayemtii mumewe hupenda kupata "baraka" au ridhaa ya mume kabla ya kufanya maamuzi makubwa.</li>
+                    <li><strong>Lugha ya mwili na sauti:</strong> Utii huonekana kwenye unyenvu wa mazungumzo, hata kama mke ana maoni tofauti.</li>
+                    <li><strong>Utetezi:</strong> Mke anayekutii atakuwa mtetezi wako mkuu ukiwa haupo na hataruhusu dharau kutoka kwa watu wa nje.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Moduli ya Tatu: Vipimo vya Utii wa Mwanamke kwa Mumewe</h2>
+                <ul>
+                    <li><strong>Kipimo cha Mapokezi:</strong> Anapokeaje maelekezo au maono unayotoa kwa ajili ya familia? Je, ni mshiriki au ni mpingaji?</li>
+                    <li><strong>Kipimo cha Muda na Vipaumbele:</strong> Je, anatoa kipaumbele kwa mahitaji ya mume na nyumba kabla ya mambo ya nje?</li>
+                    <li><strong>Kipimo cha Migogoro:</strong> Wakati wa tofauti za kifikra, je, anatafuta suluhu kwa staha au anatumia dharau na kelele kushinda hoja?</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Moduli ya Nne: Kuishi na Mwanamke Mwenye Nguvu ya kiuchumi au maarufu</h2>
+                <p>Hii ni changamoto ya kiume ya kisasa inayohitaji akili kubwa na Neema ya Mungu:</p>
+                <ul>
+                    <li><strong>Jiamini (Self-Confidence):</strong> Mwanaume usijihisi mnyonge. Nguvu ya mkeo ni nguvu ya familia. Usishindane naye, bali mshangilie.</li>
+                    <li><strong>Ongeza Thamani (Value Addition):</strong> Ikiwa yeye ana pesa au elimu, wewe mpe "hekima" na "utulivu."</li>
+                    <li><strong>Kuwa Kiongozi wa Maono:</strong> Mwanamke mwenye mafanikio makubwa atamtii mwanaume mwenye maono makubwa zaidi kuliko yeye.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 17 April 2026  Jioni ya mazungumzo na wanaume wenye matokeo</p>
+    </footer>
+
+    <script>
+        // Kazi ya Dark Mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Kazi ya Kukuza/Kupunguza Fonti
+        let currentFontSize = 16;
+        function changeFontSize(action) {
+            const content = document.getElementById('content-area');
+            currentFontSize += action;
+            if(currentFontSize < 12) currentFontSize = 12; // Kikomo cha chini
+            if(currentFontSize > 24) currentFontSize = 24; // Kikomo cha juu
+            content.style.fontSize = currentFontSize + 'px';
+        }
+    </script>
+</body>
+</html>
